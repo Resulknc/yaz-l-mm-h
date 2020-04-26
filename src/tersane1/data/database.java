@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tersane1;
+package tersane1.data;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 /**
  *
@@ -21,18 +20,17 @@ public class database {
  */
     
     
-    static Connection connection=null;
+    public static Connection connection;
     
-    public static Connection baglan() throws SQLException{
+    public static void baglan(){
     
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/yazılımmüh", "root", "5759");           
-            return connection;
-        }catch(ClassNotFoundException ex) {
-            System.out.println("MySql connector yok");
+            Class.forName("org.hsqldb.jdbcDriver");
+            connection= DriverManager.getConnection("jdbc:hsqldb:file:C:\\Users\\HP\\Desktop\\TERSANE\\;hsqldb.lock_file=false;shutdown=true", "resul", "5759");           
+            
+        }catch(Exception ex) {
             ex.printStackTrace();
-            return null;
+            return;
         }
         
     }

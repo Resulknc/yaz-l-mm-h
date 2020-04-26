@@ -8,8 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="609.0" style="-fx-background-color: #2c3e50;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tersane1.DüzeltController">
+<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="609.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tersane1.DüzeltController">
    <children>
       <SplitPane dividerPositions="0.14" layoutX="149.0" layoutY="14.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #2c3e50; -fx-border-color: #ffff;" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -34,6 +33,6 @@
       <TextField fx:id="isim" layoutX="210.0" layoutY="237.0" promptText="İSİM" style="-fx-background-color: #2c3e50; -fx-border-color: #ffff; -fx-border-radius: 5;" />
       <TextField fx:id="soy" layoutX="210.0" layoutY="288.0" promptText="SOYİSİM" style="-fx-background-color: #2c3e50; -fx-border-color: #ffff; -fx-border-radius: 5;" />
       <TextField fx:id="level" layoutX="210.0" layoutY="345.0" promptText="LEVEL" style="-fx-background-color: #2c3e50; -fx-border-color: #ffff; -fx-border-radius: 5;" />
-      <Button fx:id="güncelle" layoutX="379.0" layoutY="407.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="109.0" style="-fx-background-color: #2c3e50; -fx-border-color: #ffff; -fx-border-radius: 5;" text="GÜNCELLE" textFill="WHITE" />
+      <Button fx:id="güncelle" layoutX="379.0" layoutY="407.0" mnemonicParsing="false" onAction="#HandleButtonAction" onMouseClicked="#guncelle" prefHeight="49.0" prefWidth="109.0" style="-fx-background-color: #2c3e50; -fx-border-color: #ffff; -fx-border-radius: 5;" text="GÜNCELLE" textFill="WHITE" />
    </children>
 </AnchorPane>
