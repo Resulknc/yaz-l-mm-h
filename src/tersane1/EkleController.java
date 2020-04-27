@@ -46,13 +46,29 @@ public class EkleController implements Initializable {
     private Label oldumu;
     @FXML
     private TextField ıd;
+    @FXML
+    private Button anasayfa;
 
     /**
      * Initializes the controller class.
      */
     @FXML
     public void HandleButtonAction(ActionEvent event){
-        
+        if(event.getSource()==anasayfa){
+            try{
+                    Node node=(Node) event.getSource();
+                    Stage stage=(Stage) node.getScene().getWindow();
+                    stage.close();
+
+                    Scene scene=new Scene(FXMLLoader.load(getClass().getResource("FXMLDocument.fxml")));
+                    stage.setScene(scene);
+                    stage.show();
+
+
+                }catch(IOException e){
+                    System.err.println(e.getMessage());
+                }
+        }
             /*    oldumu.setTextFill(Color.GREEN);
                 oldumu.setText("BAŞARIYLA EKLENDİ");  
                 try{
@@ -109,7 +125,7 @@ public class EkleController implements Initializable {
             ps.executeUpdate();
             System.out.println("buraya 5"); 
             
-            Node node=(Node) event.getSource();
+           Node node=(Node) event.getSource();
             Stage stage=(Stage) node.getScene().getWindow();
             stage.close();
 
@@ -130,5 +146,7 @@ public class EkleController implements Initializable {
         
     
     }
+
+    
 
 }
